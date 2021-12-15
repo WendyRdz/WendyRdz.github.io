@@ -1,0 +1,85 @@
+body {
+  padding: 0.5em 1.5em;
+}
+
+fieldset {
+  margin: 1.5em 0;
+}
+
+button {
+  margin: 0.5em 0;
+}
+button[aria-disabled=true], button:disabled {
+  opacity: 0.6;
+}
+button:focus {
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
+fieldset div {
+  margin: 0.25em 0;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff;
+  /* this is needed for iOS. Otherwise the background just becomes black. */
+  border: 2px solid #0078B3;
+  height: 1.5em;
+  width: 1.5em;
+  display: inline-block;
+  border-radius: 100%;
+  vertical-align: text-bottom;
+  position: relative;
+}
+input[type=radio][disabled], input[type=radio][aria-disabled=true] {
+  opacity: 0.4;
+}
+input[type=radio]::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  top: 0;
+}
+input[type=radio]:focus {
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
+input[type=radio]::before {
+  height: 0;
+  width: 0;
+}
+
+input[type=radio]:checked::before {
+  border: 5px solid transparent;
+  border-radius: 100%;
+  outline-offset: -6px;
+  background: #000;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background: white;
+    color: #111;
+  }
+
+  input[type=radio] {
+    background: #ffffff;
+    border-color: #0078B3;
+  }
+
+  input[type=radio]:checked::before {
+    background: #0078B3;
+  }
+
+  input[type=radio]:focus {
+    outline-color: black;
+  }
+}
