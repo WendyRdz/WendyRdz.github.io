@@ -63,9 +63,6 @@ input[type=radio]:checked::before {
   outline-offset: -6px;
   background: #0078B3;;
 }
- label .test:focus {
-    outline: none;
-  }
 
 @media screen and (prefers-color-scheme: dark) {
   body {
@@ -84,8 +81,5 @@ input[type=radio]:checked::before {
 
   input[type=radio]:focus {
     outline-color: black;
-  }
-  label .test:focus {
-    outline: none;
   }
 }
