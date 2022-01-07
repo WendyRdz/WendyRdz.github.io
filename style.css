@@ -1,4 +1,4 @@
-/**body {
+body {
   padding: 0.5em 1.5em;
 }
 
@@ -82,4 +82,3 @@ input[type=radio]:checked::before {
     outline-color: black;
   }
 }
-**/
